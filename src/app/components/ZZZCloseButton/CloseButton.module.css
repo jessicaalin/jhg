@@ -1,0 +1,13 @@
+.button {
+    width: 39px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-800);
+    border-radius: 23%;
+}
+
+.icon {
+    color: var(--white);
+}

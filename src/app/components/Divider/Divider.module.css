@@ -1,0 +1,11 @@
+.divider {
+    width: 285px;
+    height: .5px;
+    background-color: var(--gray-100);
+  }
+
+.dividerWide {
+  width: 505px;
+  height: .5px;
+  background-color: #E7E7E7;
+}

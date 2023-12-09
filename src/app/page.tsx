@@ -1,95 +1,72 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+import styles from './page.module.css';
+import Box from '@mui/material/Box';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Button from './components/Button/Button';
+import Text from './components/Text/Text';
+import Select from './components/Select/Select';
+import Divider from './components/Divider/Divider';
+import ManifestImport from './components/ManifestImport/ManifestImport';
+import Check from './components/Check/Check';
+import ToleranceWindow from './components/ToleranceWindow/ToleranceWindow';
+import RadioButtonsGroup from './components/RadioButtonsGroup/RadioButtonsGroup';
+import Client from './components/Client/Client';
+import Continue from './components/Continue/Continue';
+
+// import { Raleway } from 'next/font/google'
+// import CssBaseline from '@mui/material/CssBaseline';
+
+// const raleway = Raleway({
+//   weight: ['300', '400', '500', '700'],
+//   subsets: ['latin'],
+//   display: 'swap',
+//   variable: '--font-raleway'
+// });
+
+const theme = createTheme({
+  typography: {
+    fontFamily: ['Raleway', 'arial', 'sans-serif'].join(','),
+  },
+});
 
 export default function Home() {
   return (
+    // <main className={styles.main}>
+    //   <div className={styles.center}>
+
+    //   </div>
+    // </main>
+    // <ThemeProvider theme={theme}>
+
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+      <div className={styles.modal}>
+        <ThemeProvider theme={theme}>
+          {/* <CssBaseline /> */}
+          <Button variant='close' />
+          <Text variant='title' text='Document Upload' />
+          <Divider my='10px' mx='auto' />
+          <Box mt='30px' mx='68px' display='flex'>
+            <Box mr='65px'>
+              <Select />
+              <Divider my='20px' />
+              <ManifestImport />
+              <Divider my='20px' />
+              <Check variant='elapse' />
+              <Divider my='20px' />
+              <ToleranceWindow />
+            </Box>
+            <Box>
+              <RadioButtonsGroup variant='split' />
+              <Divider my='20px' />
+              <Check variant='location' />
+              <Divider my='20px' />
+              <Client />
+            </Box>
+          </Box>
+          <Continue />          
+        </ThemeProvider>
       </div>
+    </main >
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
   )
 }
