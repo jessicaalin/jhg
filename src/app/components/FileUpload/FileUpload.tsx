@@ -16,8 +16,8 @@ export default function FileUpload() {
     const Basic = () => {
         const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
 
-        const fileUploadInfo = acceptedFiles.map((file: FileWithPath) => (
-            <div className={styles.fileUploadInfoContainer}>
+        const fileUploadInfo = acceptedFiles.map((file: FileWithPath, idx: number) => (
+            <div key={idx} className={styles.fileUploadInfoContainer}>
                 <Divider variant="wide" />
                 <div className={styles.fileUploadInfo}>
                     <TaskIcon className={styles.icon} />
