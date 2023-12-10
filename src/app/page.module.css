@@ -1,19 +1,16 @@
 .main {
-  width: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 .modal {
   width: max-content;
-  margin: 6rem;
-  /* min-width: 1110px; */
-  height: 913px;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  margin: 6rem;
+  padding: 2rem 2rem 4.4rem;
   background-color: var(--white);
   border-radius: 2.3%;
+  box-shadow: 0 9px 2px -2px #A2A3A7;
 }
