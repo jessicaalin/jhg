@@ -31,5 +31,5 @@ export default function Text({ variant, text }: TextProps) {
             <Typography fontSize={18} fontWeight={600} align="center" color="#092C4C">{text}</Typography>
         )
     }
-    return <div></div>
+    return <></>
 }

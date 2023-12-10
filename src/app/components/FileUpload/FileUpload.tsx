@@ -1,4 +1,5 @@
-import Button from '../Button/Button';
+import Text from "../Text/Text";
+import UploadButton from '../Button/UploadButton';
 import Divider from '../Divider/Divider';
 import ProgressBar from '../ProgressBar/ProgressBar';
 import DescriptionIcon from '@mui/icons-material/Description';
@@ -34,13 +35,14 @@ export default function FileUpload() {
 
         return (
             <>
+                <Text variant="label" text="Select a manifest you'd like to import" />
                 <section className={styles.container}>
                     <div {...getRootProps({ className: 'dropzone' })} className={styles.field}>
                         <input {...getInputProps()} />
                         <DescriptionIcon className={styles.icon} />
                         <p className={styles.placeholder}>Drag & Drop Here Or <b>Browse</b></p>
                     </div>
-                    <Button variant="upload" text="Upload Manifest" />
+                    <UploadButton />
                 </section>
                 {fileUploadInfo}
             </>
@@ -48,9 +50,6 @@ export default function FileUpload() {
     }
 
     return (
-        <>
-            <Basic />
-        </>
-
+        <Basic />
     );
 }

@@ -1,5 +1,5 @@
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import styles from './CloseButton.module.css'
+import styles from './CloseButton.module.css';
 
 export default function CloseButton() {
     return (
