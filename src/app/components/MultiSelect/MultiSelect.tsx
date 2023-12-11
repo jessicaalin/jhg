@@ -50,6 +50,7 @@ export default function MultiSelect({ number }: MultiSelectProps) {
                     id="select"
                     label="Select Client"
                     IconComponent={ExpandMoreRoundedIcon}
+                    defaultValue=""
                 >
                     <MenuItem value="">
                         <em>None</em>
